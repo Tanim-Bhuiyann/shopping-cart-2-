@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <header class="mx-auto max-w-7xl py-5">
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="text-3xl font-bold text-purple-700">MegaMart</a>
+        </div>
+
+        <div class="flex-none">
+          <div class="form-control relative hidden lg:flex">
+            <input
+              type="text"
+              placeholder="Search essentials, groceries and more..."
+              class="border-0 rounded-lg w-[507px] bg-blue-50 h-12 px-10 relative"
+            />
+            <div class="search absolute pt-4 pl-3">
+              <svg
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.82494 14.5664C11.5481 14.5664 14.5664 11.5481 14.5664 7.82494C14.5664 4.10176 11.5481 1.08353 7.82494 1.08353C4.10176 1.08353 1.08353 4.10176 1.08353 7.82494C1.08353 11.5481 4.10176 14.5664 7.82494 14.5664Z"
+                  stroke="#4A00FF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.5137 12.8639L15.1568 15.5"
+                  stroke="#4A00FF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <button class="btn e btn-ghost hidden md:flex">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="text-primary"
+            >
+              <circle
+                cx="12"
+                cy="8"
+                r="4.75"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M6 21C6 21 6 19.75 6 18.5C6 17.25 8.24914 16 12 16C15.7509 16 18 17.25 18 18.5C18 20.375 18 21 18 21"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Sign Up/Sign In
+          </button>
+          <a href="cart.html" class="btn e btn-ghost hidden md:flex">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="text-primary"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.42226 19.8203C7.84426 19.8203 8.18726 20.1633 8.18726 20.5853C8.18726 21.0073 7.84426 21.3493 7.42226 21.3493C7.00026 21.3493 6.65826 21.0073 6.65826 20.5853C6.65826 20.1633 7.00026 19.8203 7.42226 19.8203Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M18.6747 19.8203C19.0967 19.8203 19.4397 20.1633 19.4397 20.5853C19.4397 21.0073 19.0967 21.3493 18.6747 21.3493C18.2527 21.3493 17.9097 21.0073 17.9097 20.5853C17.9097 20.1633 18.2527 19.8203 18.6747 19.8203Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2.74988 3.25L4.82988 3.61L5.79288 15.083C5.87088 16.018 6.65188 16.736 7.58988 16.736H18.5019C19.3979 16.736 20.1579 16.078 20.2869 15.19L21.2359 8.632C21.3529 7.823 20.7259 7.099 19.9089 7.099H5.16388"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M14.1254 10.795H16.8984"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            Cart
+          </a>
+          <div class="drawer">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content lg:hidden md:hidden">
+              <!-- Page content here -->
+              <label
+                for="my-drawer"
+                class="btn btn-square btn-ghost drawer-button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  class="inline-block w-5 h-5 stroke-current"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path></svg
+              ></label>
+            </div>
+            <div class="drawer-side z-10">
+              <label
+                for="my-drawer"
+                aria-label="close sidebar"
+                class="drawer-overlay"
+              ></label>
+              <ul
+                class="menu p-4 w-80 min-h-full bg-base-200 text-base-content"
+              >
+                <!-- Sidebar content here -->
+                <li>
+                  <button class="btn justify-start">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="text-primary"
+                    >
+                      <circle
+                        cx="12"
+                        cy="8"
+                        r="4.75"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M6 21C6 21 6 19.75 6 18.5C6 17.25 8.24914 16 12 16C15.7509 16 18 17.25 18 18.5C18 20.375 18 21 18 21"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Sign Up/Sign In
+                  </button>
+                </li>
+                <li>
+                  <a href="cart.html" class="btn justify-start">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="text-primary"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.42226 19.8203C7.84426 19.8203 8.18726 20.1633 8.18726 20.5853C8.18726 21.0073 7.84426 21.3493 7.42226 21.3493C7.00026 21.3493 6.65826 21.0073 6.65826 20.5853C6.65826 20.1633 7.00026 19.8203 7.42226 19.8203Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M18.6747 19.8203C19.0967 19.8203 19.4397 20.1633 19.4397 20.5853C19.4397 21.0073 19.0967 21.3493 18.6747 21.3493C18.2527 21.3493 17.9097 21.0073 17.9097 20.5853C17.9097 20.1633 18.2527 19.8203 18.6747 19.8203Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M2.74988 3.25L4.82988 3.61L5.79288 15.083C5.87088 16.018 6.65188 16.736 7.58988 16.736H18.5019C19.3979 16.736 20.1579 16.078 20.2869 15.19L21.2359 8.632C21.3529 7.823 20.7259 7.099 19.9089 7.099H5.16388"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M14.1254 10.795H16.8984"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+
+                    Cart
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="mx-auto max-w-7xl py-1">
+        <hr/>
+        <!-- <div class="w-full bg-slate-100 h-px"></div> -->
+        <div class="py-1">
+          <ul class="menu menu-horizontal px-1 flex justify-center gap-4 w-full">
+            <li
+              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+            >
+              <details>
+                <summary>Groceries</summary>
+              </details>
+            </li>
+            <li
+              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+            >
+              <details>
+                <summary>Premium Fruits</summary>
+              </details>
+            </li>
+            <li
+              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+            >
+              <details>
+                <summary>Home & Kitchen</summary>
+              </details>
+            </li>
+            <li
+              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+            >
+              <details>
+                <summary>Fashion</summary>
+              </details>
+            </li>
+            <li
+              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+            >
+              <details>
+                <summary>Electronics</summary>
+              </details>
+            </li>
+            <li
+              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+            >
+              <details>
+                <summary>Beauty</summary>
+              </details>
+            </li>
+            <li
+              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+            >
+              <details>
+                <summary>Home Improvement</summary>
+              </details>
+            </li>
+            <li
+              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+            >
+              <details>
+                <summary>Sports, Toys & Luggage</summary>
+              </details>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="w-full bg-slate-100 h-px"></div> -->
+        <hr/>
+      </section>
+    <section class="mx-auto max-w-7xl py-20">
+      <div class="container">
+        <div class="grid lg:grid-cols-3 gap-12  ">
+          <div class="col-span-2">
+            <div class="card shadow-sm">
+              <div class="overflow-x-auto">
+                <table class="table">
+                  <!-- head -->
+                  <a class="text-slate-500">Shopping card</a>
+                  <thead>
+                    <th class="text-slate-950">Shopping card</th>
+                  </thead>
+                  <thead>
+                    <tr class="bg-slate-200">
+                      <th>Products</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Sub-Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- row 1 -->
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <div class="avatar">
+                            <div class="mask mask-squircle w-12 h-12">
+                              <img
+                                src="https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+                                alt="Avatar Tailwind CSS Component"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <div class="font-bold">iphone-9</div>
+                            <!-- <div class="text-sm opacity-50">United States</div> -->
+                          </div>
+                        </div>
+                      </td>
+                      <td>$549</td>
+                      <td>
+                        <input
+                          type="number"
+                          placeholder="Type here"
+                          value="2"
+                          class="input input-bordered w-20 max-w-xs"
+                        />
+                      </td>
+
+                      <td>$1098</td>
+                    </tr>
+                    <!-- row 2 -->
+                    <!-- <tr>
+
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <div class="avatar">
+                            <div class="mask mask-squircle w-12 h-12">
+                              <img
+                                src="https://img.daisyui.com/tailwind-css-component-profile-3@56w.png"
+                                alt="Avatar Tailwind CSS Component"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <div class="font-bold">Brice Swyre</div>
+                            <div class="text-sm opacity-50">China</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        Carroll Group
+                        <br />
+                        <span class="badge badge-ghost badge-sm"
+                          >Tax Accountant</span
+                        >
+                      </td>
+                      <td>Red</td>
+                      <th>
+                        <button class="btn btn-ghost btn-xs">details</button>
+                      </th>
+                    </tr> -->
+                    <!-- row 3 -->
+                    <!-- <tr>
+
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <div class="avatar">
+                            <div class="mask mask-squircle w-12 h-12">
+                              <img
+                                src="https://img.daisyui.com/tailwind-css-component-profile-4@56w.png"
+                                alt="Avatar Tailwind CSS Component"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <div class="font-bold">Marjy Ferencz</div>
+                            <div class="text-sm opacity-50">Russia</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        Rowe-Schoen
+                        <br />
+                        <span class="badge badge-ghost badge-sm"
+                          >Office Assistant I</span
+                        >
+                      </td>
+                      <td>Crimson</td>
+                      <th>
+                        <button class="btn btn-ghost btn-xs">details</button>
+                      </th>
+                    </tr> -->
+                    <!-- row 4 -->
+                    <!-- <tr>
+
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <div class="avatar">
+                            <div class="mask mask-squircle w-12 h-12">
+                              <img
+                                src="https://img.daisyui.com/tailwind-css-component-profile-5@56w.png"
+                                alt="Avatar Tailwind CSS Component"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <div class="font-bold">Yancy Tear</div>
+                            <div class="text-sm opacity-50">Brazil</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        Wyman-Ledner
+                        <br />
+                        <span class="badge badge-ghost badge-sm"
+                          >Community Outreach Specialist</span
+                        >
+                      </td>
+                      <td>Indigo</td>
+                      <th>
+                        <button class="btn btn-ghost btn-xs">details</button>
+                      </th>
+                    </tr> -->
+                  </tbody>
+                  <!-- foot -->
+                  <!-- <tfoot>
+                    <tr>
+                      <th></th>
+                      <th>Name</th>
+                      <th>Job</th>
+                      <th>Favorite Color</th>
+                      <th></th>
+                    </tr>
+                  </tfoot> -->
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="shadow-xl">
+            <a class="text-slate-500">Card Total</a>
+            <div class="card-body">
+              <h2 class="card-title">Card Totals</h2>
+              <div class="flex justify-between">
+                <span class="text-gray-500">Sub-total</span>
+                <span>$1098</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-500">Shipping</span>
+                <span>Free</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-500">Discount</span>
+                <span>$0</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-500">Tax</span>
+                <span>$0</span>
+              </div>
+              <hr />
+              <div class="flex justify-between">
+                <span class="text-gray-500">Total</span>
+                <span>$1098</span>
+              </div>
+              <button class="btn btn-primary">Proceed to Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
