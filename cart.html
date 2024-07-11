@@ -114,6 +114,7 @@
             </svg>
 
             Cart
+            <div class="cart-total-items badge badge-primary">0</div>
           </a>
           <div class="drawer">
             <input id="my-drawer" type="checkbox" class="drawer-toggle" />
@@ -229,74 +230,74 @@
       </div>
     </header>
     <section class="mx-auto max-w-7xl py-1">
-        <hr/>
-        <!-- <div class="w-full bg-slate-100 h-px"></div> -->
-        <div class="py-1">
-          <ul class="menu menu-horizontal px-1 flex justify-center gap-4 w-full">
-            <li
-              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
-            >
-              <details>
-                <summary>Groceries</summary>
-              </details>
-            </li>
-            <li
-              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
-            >
-              <details>
-                <summary>Premium Fruits</summary>
-              </details>
-            </li>
-            <li
-              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
-            >
-              <details>
-                <summary>Home & Kitchen</summary>
-              </details>
-            </li>
-            <li
-              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
-            >
-              <details>
-                <summary>Fashion</summary>
-              </details>
-            </li>
-            <li
-              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
-            >
-              <details>
-                <summary>Electronics</summary>
-              </details>
-            </li>
-            <li
-              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
-            >
-              <details>
-                <summary>Beauty</summary>
-              </details>
-            </li>
-            <li
-              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
-            >
-              <details>
-                <summary>Home Improvement</summary>
-              </details>
-            </li>
-            <li
-              class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
-            >
-              <details>
-                <summary>Sports, Toys & Luggage</summary>
-              </details>
-            </li>
-          </ul>
-        </div>
-        <!-- <div class="w-full bg-slate-100 h-px"></div> -->
-        <hr/>
-      </section>
+      <hr />
+      <!-- <div class="w-full bg-slate-100 h-px"></div> -->
+      <div class="py-1">
+        <ul class="menu menu-horizontal px-1 flex justify-center gap-4 w-full">
+          <li
+            class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+          >
+            <details>
+              <summary>Groceries</summary>
+            </details>
+          </li>
+          <li
+            class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+          >
+            <details>
+              <summary>Premium Fruits</summary>
+            </details>
+          </li>
+          <li
+            class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+          >
+            <details>
+              <summary>Home & Kitchen</summary>
+            </details>
+          </li>
+          <li
+            class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+          >
+            <details>
+              <summary>Fashion</summary>
+            </details>
+          </li>
+          <li
+            class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+          >
+            <details>
+              <summary>Electronics</summary>
+            </details>
+          </li>
+          <li
+            class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+          >
+            <details>
+              <summary>Beauty</summary>
+            </details>
+          </li>
+          <li
+            class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+          >
+            <details>
+              <summary>Home Improvement</summary>
+            </details>
+          </li>
+          <li
+            class="bg-slate-100 rounded-full hover:bg-primary hover:text-white"
+          >
+            <details>
+              <summary>Sports, Toys & Luggage</summary>
+            </details>
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="w-full bg-slate-100 h-px"></div> -->
+      <hr />
+    </section>
     <section class="mx-auto max-w-7xl py-20">
       <div class="container">
-        <div class="grid lg:grid-cols-3 gap-12  ">
+        <div class="grid lg:grid-cols-3 gap-12">
           <div class="col-span-2">
             <div class="card shadow-sm">
               <div class="overflow-x-auto">
@@ -314,130 +315,10 @@
                       <th>Sub-Total</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <!-- row 1 -->
+                  <tbody class="cart-items">
                     <tr>
-                      <td>
-                        <div class="flex items-center gap-3">
-                          <div class="avatar">
-                            <div class="mask mask-squircle w-12 h-12">
-                              <img
-                                src="https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
-                                alt="Avatar Tailwind CSS Component"
-                              />
-                            </div>
-                          </div>
-                          <div>
-                            <div class="font-bold">iphone-9</div>
-                            <!-- <div class="text-sm opacity-50">United States</div> -->
-                          </div>
-                        </div>
-                      </td>
-                      <td>$549</td>
-                      <td>
-                        <input
-                          type="number"
-                          placeholder="Type here"
-                          value="2"
-                          class="input input-bordered w-20 max-w-xs"
-                        />
-                      </td>
-
-                      <td>$1098</td>
+                      
                     </tr>
-                    <!-- row 2 -->
-                    <!-- <tr>
-
-                      <td>
-                        <div class="flex items-center gap-3">
-                          <div class="avatar">
-                            <div class="mask mask-squircle w-12 h-12">
-                              <img
-                                src="https://img.daisyui.com/tailwind-css-component-profile-3@56w.png"
-                                alt="Avatar Tailwind CSS Component"
-                              />
-                            </div>
-                          </div>
-                          <div>
-                            <div class="font-bold">Brice Swyre</div>
-                            <div class="text-sm opacity-50">China</div>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        Carroll Group
-                        <br />
-                        <span class="badge badge-ghost badge-sm"
-                          >Tax Accountant</span
-                        >
-                      </td>
-                      <td>Red</td>
-                      <th>
-                        <button class="btn btn-ghost btn-xs">details</button>
-                      </th>
-                    </tr> -->
-                    <!-- row 3 -->
-                    <!-- <tr>
-
-                      <td>
-                        <div class="flex items-center gap-3">
-                          <div class="avatar">
-                            <div class="mask mask-squircle w-12 h-12">
-                              <img
-                                src="https://img.daisyui.com/tailwind-css-component-profile-4@56w.png"
-                                alt="Avatar Tailwind CSS Component"
-                              />
-                            </div>
-                          </div>
-                          <div>
-                            <div class="font-bold">Marjy Ferencz</div>
-                            <div class="text-sm opacity-50">Russia</div>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        Rowe-Schoen
-                        <br />
-                        <span class="badge badge-ghost badge-sm"
-                          >Office Assistant I</span
-                        >
-                      </td>
-                      <td>Crimson</td>
-                      <th>
-                        <button class="btn btn-ghost btn-xs">details</button>
-                      </th>
-                    </tr> -->
-                    <!-- row 4 -->
-                    <!-- <tr>
-
-                      <td>
-                        <div class="flex items-center gap-3">
-                          <div class="avatar">
-                            <div class="mask mask-squircle w-12 h-12">
-                              <img
-                                src="https://img.daisyui.com/tailwind-css-component-profile-5@56w.png"
-                                alt="Avatar Tailwind CSS Component"
-                              />
-                            </div>
-                          </div>
-                          <div>
-                            <div class="font-bold">Yancy Tear</div>
-                            <div class="text-sm opacity-50">Brazil</div>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        Wyman-Ledner
-                        <br />
-                        <span class="badge badge-ghost badge-sm"
-                          >Community Outreach Specialist</span
-                        >
-                      </td>
-                      <td>Indigo</td>
-                      <th>
-                        <button class="btn btn-ghost btn-xs">details</button>
-                      </th>
-                    </tr> -->
                   </tbody>
                   <!-- foot -->
                   <!-- <tfoot>
@@ -459,7 +340,7 @@
               <h2 class="card-title">Card Totals</h2>
               <div class="flex justify-between">
                 <span class="text-gray-500">Sub-total</span>
-                <span>$1098</span>
+                <span class="sub-total">$0</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-gray-500">Shipping</span>
@@ -476,7 +357,7 @@
               <hr />
               <div class="flex justify-between">
                 <span class="text-gray-500">Total</span>
-                <span>$1098</span>
+                <span class="total">$0</span>
               </div>
               <button class="btn btn-primary">Proceed to Checkout</button>
             </div>
@@ -485,6 +366,6 @@
       </div>
     </section>
 
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/cart.js"></script>
   </body>
 </html>
